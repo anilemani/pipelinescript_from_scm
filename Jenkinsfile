@@ -20,7 +20,7 @@ pipeline {
         stage('deployment') {
             steps {
                sh 'sshpass -p "syam" scp target/gamutgurus.war syam@172.17.0.4:/home/syam/apache-tomcat-9.0.59/webapps'
-               sh 'sshpass -p "syam" ssh syam@172.17.0.3 "/home/syam/apache-tomcat-9.0.59/bin/startup.sh"'
+               sh 'sshpass -p "syam" ssh syam@172.17.0.4 "/home/syam/apache-tomcat-9.0.59/bin/startup.sh"'
             }
         }
     }
